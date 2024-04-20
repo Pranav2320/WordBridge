@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordBridge</title>
+  
+   
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
+
+</head>
+
+<body class="header-animation section-title-animation section-content-animation">
+
+    <header class="text-gray-900 bg-gray-200 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" style="margin-left:20px;">
+          <a class="flex title-font font-medium items-center text-cyan-500 mb-4 md:mb-0">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TranslaTron Logo" class="w-10 h-10 rounded-full" style="width:100px;height:85px;margin-left:0px;">
+            <span class="ml-3 hover:text-cyan-400 text-black text-xl">WordBridge</span>
+        </a>
+        
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-cyan-400"> Home </a>
+            <a class="mr-5 hover:text-cyan-400"> About Us </a>
+            <a class="mr-5 hover:text-cyan-400"> Utilities </a>
+            <a class="mr-5 hover:text-cyan-400"> Feedback </a>
+          </nav>
+       
+        </div>
+      </header>
+
+
+      <section class="relative ">
+        <div class="container mx-auto flex flex-col items-center justify-center py-16 md:flex-row " style="padding: 140px 0px;">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <div class="!text-cyan-600 title-font sm:text-5xl text-5xl mb-4 font-cursive ">WordBridge</div>
+            <h1 class="title-font sm:text-2xl text-xl mb-4 font-medium  ">"One Platform, Many Voices: Transforming Language, Connecting Cultures"<br class="hidden lg:inline-block">
+            </h1>
+
+            <p class="mb-8 leading-relaxed">One stop solution for your every language barrier!<div class="flex justify-center">   
+              <a src="./templates/audio_to_text.html" ><img src="./static/images/voice_translation.png" class="inline-flex  border-0 py-2 px-6  rounded " style="height:100px;width:130px;margin-right:20px;"><br>Audio Translation</a>
+              <a src="./templates/audio_to_text.html" ><img src="./static/images/text_translation.png" class="inline-flex  border-0 py-2 px-6  rounded " style="height:100px;width:130px;"><br>&nbsp&nbspText Translation</a>
+              <a src="./templates/audio_to_text.html" ><img src="./static/images/lang.png" class="inline-flex  border-0 py-2 px-6  rounded " style="height:100px;width:130px;"><br>&nbsp&nbsp&nbsp Supports<br>&nbsp&nbsp&nbsp International <br>&nbsp&nbsp&nbsp languages</a>
+              <a src="./templates/audio_to_text.html" ><img src="./static/images/key.png" class="inline-flex  border-0 py-2 px-6 ml-5 rounded " style="height:100px;width:130px;"><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAll control<br>&nbsp&nbsp&nbsp&nbsp just with keypad.</a>
+            </button>
+            
+        </div>
+          </div>
+          <div class="md:w-1/2 relative">
+            <video class="w-full h-full object-cover object-center" autoplay loop muted>
+                <source src="{{ url_for('static', filename='images/header.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+      </section>
+
+    
+
+      <section class=" text-cyan-500 body-font bg-gray-900">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-10">
+           
+            <h1 class="sm:text-4xl text-2xl font-medium title-font mb-8 text-cyan-500">We enable everyone <br> to communicate in any language</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-white">TranslaTron is a language translation app that provides both audio and text translation features in over 100 languages. The app offers voice recognition for multiple languages and verbal translation for multiple voices . It also provides a range of features such as alternative translations, verb conjugations, and dictionaries with additional translation results.</p>
+        </div>
+      </section>
+
+
+        <section class="bg-white-900  body-font overflow-hidden">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <video style="height:400px;width:400px" class="w-full h-full object-cover object-center" autoplay loop muted>
+                  <source src="{{ url_for('static', filename='images/text-to-text.mp4') }}" type="video/mp4">
+                  
+              </video><div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                 
+                  <h1 class="text-gray-900 pt-30 pl-10 text-6xl title-font mb-1 font-bold">Text<br> Translation</h1>
+                  <div class="flex mb-4">
+                    
+                  </div>
+                  <p class="leading-relaxed sans-serif pl-10 font-medium">Introducing our text-to-text translation service, capable of seamlessly translating content across over 100 languages. Our advanced technology ensures accurate and natural translations, enabling effortless communication and global reach for businesses, individuals, and organizations. Say goodbye to language barriers and embrace the power of multilingual communication with our comprehensive translation solution."
+                    <div id="snippet-container" class="flex items-center justify-center my-4">
+                      <button type="submit" class="btn bg-gradient-to-r p-3 rounded from-cyan-500 to-blue-500 text-white" ><a href="./text-to-text">Text to Text <i class="bi bi-translate"></i></button>
+                      <button type="button" class="btn bg-gradient-to-r p-3 rounded ml-2 from-yellow-400 to-amber-500  text-white "><a href="./text-to-speech">Text to Audio <i class="bi bi-clipboard "></i></button>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+
+          <section class="bg-gray-900 text-white body-font overflow-hidden">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+                  
+                    <h1 class="text-cyan-500 pt-30 text-6xl title-font mb-1 font-bold">Audio<br> Translation</h1>
+                  
+                    <p class="leading-relaxed sans-serif font-medium"><br>"Introducing our state-of-the-art voice-to-voice translation service, empowering users to effortlessly communicate in over 100 languages. Our innovative technology accurately translates spoken words in real-time, providing seamless conversations across borders and cultures. Experience the convenience of instant, natural communication with our advanced voice translation solution, breaking down language barriers and connecting people worldwide."
+                      <div id="snippet-container" class="flex items-center justify-center my-4">
+                        <button type="submit" class="btn bg-gradient-to-r p-3 rounded from-cyan-500 to-blue-500 text-white" ><a href="./speech-to-text">Audio to Text <i class="bi bi-translate"></i></button>
+                        <button type="button" class="btn bg-gradient-to-r p-3 rounded ml-2 from-yellow-400 to-amber-500  text-white "><a href="./audio-to-audio">Audio to Audio <i class="bi bi-clipboard "></i></button>
+                    </div>
+                    </div>
+                    <video style="height:400px;width:400px" class="w-full h-full object-cover object-center" autoplay loop muted>
+                      <source src="{{ url_for('static', filename='images/audio translation.mp4') }}" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video><div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              </div>
+            </div>
+          </section>
+
+          <section class="bg-white text-black body-font overflow-hidden">
+            <div class="container px-15 py-24 mx-auto text-center"> 
+              <div class="lg:w-4/5 mx-auto flex flex-wrap">
+                <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 ml-72">
+                  <h1 class="text-black pt-30 text-6xl title-font mb-1 font-bold">About Us</h1>
+                  <p class="leading-relaxed sans-serif font-medium">
+                    <br>
+                    "We are a team of passionate individuals dedicated to breaking down language barriers and fostering global communication. Our mission is to make language translation accessible, convenient, and accurate for everyone, regardless of their linguistic background or geographic location."
+                  </p>
+                </div>
+                
+              </div>
+              
+            </div>
+            <div class="container mx-6">
+              <div class="ml-96 grid grid-cols-3 gap-4">
+                  <div class="col">
+                      <div class="form-group">
+                        <img src="./static/images/Picture1.png">
+                        <p class="leading-relaxed sans-serif font-medium"><br>
+                      
+                      </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <img src="./static/images/Picture3.png">
+                    </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <img src="./static/images/Picture4.png">
+                  </div>
+              </div>
+              </div>
+          </div>
+          </section>
+
+          <footer class="bg-gray-900 text-white body-font">
+            <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+              <a class="flex title-font font-medium items-center md:justify-start justify-center text-xl" href="mailto:carlo.sada.r.us.a@gmail.com?body=Hey WordBridge,%0D%0A">
+                Feedback
+              </a>
+              <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                <p class="text-sm font-medium">©️2024 WordBridge. All Rights Reserved</p>
+              </span>
+            </div>
+          </footer>
+</body>
+</html>
